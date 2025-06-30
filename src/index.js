@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client' for React 18+
+import './index.css'; // Import your Tailwind CSS styles
+import App from './App'; // Import the main App component
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
