@@ -11,7 +11,7 @@ const profileData = {
         email: 'itsaabhaas@gmail.com',
         dob: '18-01-1997',
         nationality: 'Nepali',
-        profileImage: 'https://placehold.co/200x200/007bff/ffffff?text=Your+Photo' // Placeholder for profile image
+        profileImage: 'https://github.com/mapsaashish/my-portfolio-app/blob/main/src/data/images/profile_photo.jpg' // Placeholder for profile image
     },
     academic: [
         {
