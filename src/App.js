@@ -50,7 +50,7 @@ const profileData = {
                     name: 'Community GIS Tool (CGIST)',
                     link: '#',
                     imageUrl: 'https://placehold.co/400x200/FF5733/FFFFFF?text=CGIST+Thumbnail',
-                    fullDescription: 'The Community GIS Tool (CGIST) is an innovative platform designed to enable the Nepal Police, in collaboration with local communities and governments, to tackle specific problems through data visualization. This tool bridges the gap between data insights and actionable solutions, fostering a collaborative approach to community challenges.
+                    fullDescription:`The Community GIS Tool (CGIST) is an innovative platform designed to enable the Nepal Police, in collaboration with local communities and governments, to tackle specific problems through data visualization. This tool bridges the gap between data insights and actionable solutions, fostering a collaborative approach to community challenges.
 
 As a key contributor to this initiative, I played a pivotal role in overseeing the development of the platform in partnership with Naxa Pvt. Ltd., the development partner. From its inception to its completion, the CGIST tool was crafted to empower users with spatial data insights for informed decision-making.
 
@@ -62,24 +62,13 @@ Social mobilizers and psychosocial workers: working in seven wards across multip
 
 In addition to these sessions, community members and local government stakeholders were oriented on the importance of spatial data and trained to leverage CGIST for resolving local challenges. This inclusive approach ensures that the tool is not only understood but also effectively utilized by those at the forefront of community development.
 
-By enabling collaboration and enhancing data-driven decision-making, the CGIST platform continues to contribute to sustainable and impactful problem-solving in Nepal.',
+By enabling collaboration and enhancing data-driven decision-making, the CGIST platform continues to contribute to sustainable and impactful problem-solving in Nepal.`,
                     additionalImages: [
                         'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+1',
                         'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+2',
                         'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+3'
                     ]
                 },
-                {
-                    id: 'justice-maps', // Unique ID
-                    name: 'Security and Justice Programme Maps',
-                    link: '#',
-                    imageUrl: 'https://placehold.co/400x200/33FF57/FFFFFF?text=Maps+Thumbnail',
-                    fullDescription: 'As part of the Security and Justice Programme, I was responsible for developing and preparing a wide range of maps crucial for program objectives and communication efforts. These maps were used in various contexts, including operational planning, stakeholder presentations, and public awareness campaigns through newsletters. The process involved meticulous data collection, analysis, and cartographic design to ensure accuracy and clarity. These mapping initiatives were vital for visualizing key program areas, identifying security hotspots, and tracking progress on justice interventions. My work ensured that complex spatial data was presented in an easily digestible format, supporting effective communication and decision-making for both internal teams and external partners. This demonstrates my expertise in creating impactful visual aids from raw geospatial data.',
-                    additionalImages: [
-                        'https://placehold.co/600x400/33FF57/FFFFFF?text=Map+Detail+1',
-                        'https://placehold.co/600x400/33FF57/FFFFFF?text=Map+Detail+2'
-                    ]
-                }
             ]
         },
         {
