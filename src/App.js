@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 // Data extracted and structured from the provided CV.
-// This can be expanded to include more details and links for sample works.
-// In a real app, you might fetch this from an API or a separate data file.
+// IMPORTANT: You will need to replace the placeholder fullDescription
+// and additionalImages URLs with your actual project content and images.
 const profileData = {
     personal: {
         name: 'Aashish Sharma',
@@ -11,7 +11,7 @@ const profileData = {
         email: 'itsaabhaas@gmail.com',
         dob: '18-01-1997',
         nationality: 'Nepali',
-        profileImage: '/images/profile_photo.jpg'    // Placeholder for profile image
+        profileImage: '/image/profile_photo.jpg' // Path to your profile image in public/image folder
     },
     academic: [
         {
@@ -45,8 +45,41 @@ const profileData = {
                 'Facilitated training sessions for over 7 working local units of SARA (First Phase), significantly contributing to the rollout and adoption of new technological tools for problem-solving.'
             ],
             sampleWorks: [
-                { name: 'Community GIS Tool (CGIST)', link: '#' }, // Placeholder link
-                { name: 'Security and Justice Programme Maps', link: '#' } // Placeholder link
+                {
+                    id: 'cgist', // Unique ID for this project
+                    name: 'Community GIS Tool (CGIST)',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/FF5733/FFFFFF?text=CGIST+Thumbnail',
+                    fullDescription: 'The Community GIS Tool (CGIST) is an innovative platform designed to enable the Nepal Police, in collaboration with local communities and governments, to tackle specific problems through data visualization. This tool bridges the gap between data insights and actionable solutions, fostering a collaborative approach to community challenges.
+
+As a key contributor to this initiative, I played a pivotal role in overseeing the development of the platform in partnership with Naxa Pvt. Ltd., the development partner. From its inception to its completion, the CGIST tool was crafted to empower users with spatial data insights for informed decision-making.
+
+After its development, I had the privilege of leading training programs for diverse groups, including:
+
+Nepal Police personnel: to familiarize them with the tool's potential in community-level problem-solving.
+
+Social mobilizers and psychosocial workers: working in seven wards across multiple municipalities in the Karnali, Lumbini, and Sudurpashchim provinces.
+
+In addition to these sessions, community members and local government stakeholders were oriented on the importance of spatial data and trained to leverage CGIST for resolving local challenges. This inclusive approach ensures that the tool is not only understood but also effectively utilized by those at the forefront of community development.
+
+By enabling collaboration and enhancing data-driven decision-making, the CGIST platform continues to contribute to sustainable and impactful problem-solving in Nepal.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+1',
+                        'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+2',
+                        'https://placehold.co/600x400/FF5733/FFFFFF?text=CGIST+Detail+3'
+                    ]
+                },
+                {
+                    id: 'justice-maps', // Unique ID
+                    name: 'Security and Justice Programme Maps',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/33FF57/FFFFFF?text=Maps+Thumbnail',
+                    fullDescription: 'As part of the Security and Justice Programme, I was responsible for developing and preparing a wide range of maps crucial for program objectives and communication efforts. These maps were used in various contexts, including operational planning, stakeholder presentations, and public awareness campaigns through newsletters. The process involved meticulous data collection, analysis, and cartographic design to ensure accuracy and clarity. These mapping initiatives were vital for visualizing key program areas, identifying security hotspots, and tracking progress on justice interventions. My work ensured that complex spatial data was presented in an easily digestible format, supporting effective communication and decision-making for both internal teams and external partners. This demonstrates my expertise in creating impactful visual aids from raw geospatial data.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/33FF57/FFFFFF?text=Map+Detail+1',
+                        'https://placehold.co/600x400/33FF57/FFFFFF?text=Map+Detail+2'
+                    ]
+                }
             ]
         },
         {
@@ -63,8 +96,30 @@ const profileData = {
                 'Spearheaded the preparation of the Municipal Transportation Master Plan (MTMP) for Kailari Rural Municipality, laying the groundwork for sustainable and efficient transportation infrastructure development.'
             ],
             sampleWorks: [
-                { name: 'Kobo-Based School Assessment Tool', link: '#' },
-                { name: 'GIS-based resource map for Aandhikhola Rural Municipality', link: '#' }
+                {
+                    id: 'kobo-tool',
+                    name: 'Kobo-Based School Assessment Tool',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/3366FF/FFFFFF?text=Kobo+Tool+Thumbnail',
+                    fullDescription: 'This project involved the development and implementation of a Kobo-based tool for assessing disaster-affected schools in Bajhang District. The tool enabled rapid and efficient data collection, which was crucial for identifying the extent of damage and prioritizing intervention needs. I also conducted training for local stakeholders on using the tool, ensuring sustainable data collection practices. This initiative significantly improved the response capabilities for educational infrastructure during disaster recovery operations. The data collected was critical for informing government and NGO partners about the specific needs of schools, allowing for targeted aid and reconstruction efforts. This project demonstrates my proficiency in designing and deploying mobile data collection solutions for humanitarian and development contexts.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/3366FF/FFFFFF?text=Kobo+Detail+1',
+                        'https://placehold.co/600x400/3366FF/FFFFFF?text=Kobo+Detail+2',
+                        'https://placehold.co/600x400/3366FF/FFFFFF?text=Kobo+Detail+3',
+                        'https://placehold.co/600x400/3366FF/FFFFFF?text=Kobo+Detail+4'
+                    ]
+                },
+                {
+                    id: 'aandhikhola-map',
+                    name: 'GIS-based resource map for Aandhikhola Rural Municipality',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/FF33CC/FFFFFF?text=Aandhikhola+Map+Thumbnail',
+                    fullDescription: 'I produced a comprehensive GIS-based resource map for Aandhikhola Rural Municipality, which played a pivotal role in enhancing disaster preparedness and resource management capabilities. This map identified critical infrastructure, natural resources, and vulnerable areas, providing local authorities with a visual tool for planning and response. The project involved extensive fieldwork, data digitization, and spatial analysis to create a highly accurate and actionable resource. This map has been instrumental in supporting the municipality’s efforts to allocate resources efficiently during emergencies and to develop long-term resilience strategies. My work on this project showcases my expertise in creating practical GIS solutions that have direct positive impacts on community safety and development.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/FF33CC/FFFFFF?text=Aandhikhola+Map+Detail+1',
+                        'https://placehold.co/600x400/FF33CC/FFFFFF?text=Aandhikhola+Map+Detail+2'
+                    ]
+                }
             ]
         },
         {
@@ -91,8 +146,32 @@ const profileData = {
                 'Supported Dhangadhi Sub-Metropolitan City in finalization of Metric Based House Numbering System based on GIS.'
             ],
             sampleWorks: [
-                { name: 'Municipal Emergency Operation Center (MEOC) Establishment', link: '#' },
-                { name: 'Risk, Vulnerability, and Capacity Maps', link: '#' }
+                {
+                    id: 'meoc-establishment',
+                    name: 'Municipal Emergency Operation Center (MEOC) Establishment',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/FF9900/FFFFFF?text=MEOC+Thumbnail',
+                    fullDescription: 'I played a key role in supporting Dhangadhi Sub-Metropolitan City in the establishment of its Municipal Emergency Operation Center (MEOC). This involved coordinating with various stakeholders, setting up necessary infrastructure, and ensuring the MEOC was functional for effective disaster preparedness and response. My contributions included technical guidance on information management systems and training personnel for operational readiness. The MEOC now serves as a central hub for coordinating emergency efforts, significantly enhancing the city\'s capacity to manage and respond to crises. This experience demonstrates my ability to facilitate complex institutional development projects in challenging environments.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/FF9900/FFFFFF?text=MEOC+Detail+1',
+                        'https://placehold.co/600x400/FF9900/FFFFFF?text=MEOC+Detail+2',
+                        'https://placehold.co/600x400/FF9900/FFFFFF?text=MEOC+Detail+3'
+                    ]
+                },
+                {
+                    id: 'risk-vulnerability-maps',
+                    name: 'Risk, Vulnerability, and Capacity Maps',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/00CCFF/FFFFFF?text=Risk+Maps+Thumbnail',
+                    fullDescription: 'I prepared a series of 8 risk, vulnerability, and capacity maps that were strategically installed in community locations and 24 GIS maps for the atlas map book of action wards in Dhangadhi Sub-Metropolitan City. These maps provided critical visual information for local communities and authorities, helping them understand potential hazards, identify vulnerable populations, and assess existing capacities for disaster response. The process involved detailed spatial analysis, community participation, and high-quality cartographic design to ensure the maps were both informative and accessible. These maps serve as vital tools for disaster risk reduction education and planning at the grassroots level.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/00CCFF/FFFFFF?text=Risk+Maps+Detail+1',
+                        'https://placehold.co/600x400/00CCFF/FFFFFF?text=Risk+Maps+Detail+2',
+                        'https://placehold.co/600x400/00CCFF/FFFFFF?text=Risk+Maps+Detail+3',
+                        'https://placehold.co/600x400/00CCFF/FFFFFF?text=Risk+Maps+Detail+4',
+                        'https://placehold.co/600x400/00CCFF/FFFFFF?text=Risk+Maps+Detail+5'
+                    ]
+                }
             ]
         },
         {
@@ -120,8 +199,29 @@ const profileData = {
                 'Led team of Civil Engineers for Initial Environmental Assessment in Hokse of Panchkhal for Establishment of Green Industrial Village.'
             ],
             sampleWorks: [
-                { name: 'Topographic Map for Rapti River', link: '#' },
-                { name: 'Open Space Mapping (Urban DRR)', link: '#' }
+                {
+                    id: 'rapti-river-map',
+                    name: 'Topographic Map for Rapti River',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/FF66B2/FFFFFF?text=Rapti+Map+Thumbnail',
+                    fullDescription: 'I conducted a detailed drone survey and prepared a high-resolution topographic map for the Rapti River in Sauraha, Chitwan. This map was essential for flood modeling in coordination with INK Consultancy, providing critical elevation and terrain data necessary for accurate flood prediction and mitigation planning. The project involved advanced photogrammetry techniques to create precise spatial data, which directly contributed to environmental management and disaster preparedness efforts in the region. This work demonstrates my expertise in aerial surveying and the application of geospatial data for hydrological analysis and risk assessment.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/FF66B2/FFFFFF?text=Rapti+Map+Detail+1',
+                        'https://placehold.co/600x400/FF66B2/FFFFFF?text=Rapti+Map+Detail+2',
+                        'https://placehold.co/600x400/FF66B2/FFFFFF?text=Rapti+Map+Detail+3'
+                    ]
+                },
+                {
+                    id: 'urban-drr-map',
+                    name: 'Open Space Mapping (Urban DRR)',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/9966FF/FFFFFF?text=Open+Space+Map+Thumbnail',
+                    fullDescription: 'As part of an Urban Disaster Risk Reduction (DRR) project with UNDP, I led the open space mapping initiative in Ward No. 2 and 10 and evacuation route mapping of slum areas in Aaptari using drone-based surveys. Identifying accessible open spaces is crucial for safe evacuation and temporary shelter during disasters. My role involved collecting high-resolution aerial imagery, processing the data, and creating detailed maps that highlight these critical areas and evacuation routes. This project significantly contributed to enhancing urban resilience and ensuring the safety of vulnerable populations in densely populated areas. It showcases my proficiency in utilizing drone technology for critical urban planning and disaster preparedness.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/9966FF/FFFFFF?text=Open+Space+Map+Detail+1',
+                        'https://placehold.co/600x400/9966FF/FFFFFF?text=Open+Space+Map+Detail+2'
+                    ]
+                }
             ]
         },
         {
@@ -155,8 +255,32 @@ const profileData = {
                 'Supported in Maintenance of geospatial data in Geoportal of National Survey Department.'
             ],
             sampleWorks: [
-                { name: 'GIS and Web Mapping Projects', link: '#' },
-                { name: 'Capacity, Risk and Hazard Maps (UNDP)', link: '#' }
+                {
+                    id: 'gis-web-mapping',
+                    name: 'GIS and Web Mapping Projects',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/66FF99/FFFFFF?text=GIS+Project+Thumbnail',
+                    fullDescription: 'At NAXA Pvt. Ltd., I oversaw numerous GIS and web mapping projects, ensuring timely completion and successful project goals. This included developing and enforcing GIS standards for geodata management, map design, and mobile/drone-based data collection activities. I created project work plans, determined resource requirements, and coordinated all GIS-related activities. My role also involved developing curricula and delivering training on GIS and web-based mapping to various technical and non-technical professionals. I supervised team members in mapping and spatial analysis, prepared technical proposals, reports, and handover documents, and actively communicated with clients to maintain strong coordination. This comprehensive experience highlights my leadership in geospatial project management and my commitment to delivering high-quality, impactful solutions.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+1',
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+2',
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+3',
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+4',
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+5',
+                        'https://placehold.co/600x400/66FF99/FFFFFF?text=GIS+Project+Detail+6'
+                    ]
+                },
+                {
+                    id: 'undp-capacity-maps',
+                    name: 'Capacity, Risk and Hazard Maps (UNDP)',
+                    link: '#',
+                    imageUrl: 'https://placehold.co/400x200/FF3333/FFFFFF?text=UNDP+Map+Thumbnail',
+                    fullDescription: 'I led data collection and mapping activities for preparing capacity, risk, and hazard maps for Bhimeshwor and Bharatpur under a UNDP project. This involved extensive fieldwork, community engagement, and sophisticated spatial analysis to accurately identify and represent areas of vulnerability and resilience. These maps are critical tools for local disaster preparedness and response planning, providing visual insights into potential threats and community strengths. My role also included training locals in OpenStreetMap and field-based GPS-surveying in Humla, enhancing local capacity for data collection and mapping. This project underlines my expertise in developing actionable geospatial products for humanitarian and development initiatives.',
+                    additionalImages: [
+                        'https://placehold.co/600x400/FF3333/FFFFFF?text=UNDP+Map+Detail+1',
+                        'https://placehold.co/600x400/FF3333/FFFFFF?text=UNDP+Map+Detail+2'
+                    ]
+                }
             ]
         }
     ],
@@ -362,9 +486,14 @@ const ExperienceSection = ({ experience }) => (
                                 <h4 className="text-xl font-semibold text-gray-800 mb-2">Sample Works:</h4>
                                 <div className="flex flex-wrap gap-3">
                                     {exp.sampleWorks.map((work, i) => (
-                                        <a key={i} href={work.link} target="_blank" rel="noopener noreferrer" className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-blue-200 transition duration-300">
+                                        // This link will now trigger the ProjectDetailSection
+                                        <button
+                                            key={i}
+                                            onClick={() => setActiveSection('project-detail', work)} // Will pass the work object
+                                            className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-blue-200 transition duration-300 cursor-pointer"
+                                        >
                                             {work.name}
-                                        </a>
+                                        </button>
                                     ))}
                                 </div>
                             </div>
@@ -477,9 +606,15 @@ const TrainingsSection = ({ trainings }) => (
     </section>
 );
 
-// Functional component for the Sample Works section (aggregating from experience)
-const SampleWorksSection = ({ experience, research }) => {
+// Functional component for the Sample Works section
+const SampleWorksSection = ({ experience, research, setActiveSection, setSelectedProjectDetails }) => {
+    // Flatten all sample works from all experience entries into a single array
     const allSampleWorks = experience.flatMap(exp => exp.sampleWorks || []);
+
+    const handleProjectClick = (project) => {
+        setSelectedProjectDetails(project); // Set the details of the clicked project
+        setActiveSection('project-detail'); // Navigate to the project detail view
+    };
 
     return (
         <section id="sample-works" className="py-12 bg-gray-50 rounded-lg shadow-xl px-4">
@@ -488,16 +623,28 @@ const SampleWorksSection = ({ experience, research }) => {
                 {allSampleWorks.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {allSampleWorks.map((work, index) => (
-                            <a key={index} href={work.link} target="_blank" rel="noopener noreferrer" className="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                            <button
+                                key={index}
+                                onClick={() => handleProjectClick(work)} // Use a button for click interaction
+                                className="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 text-left cursor-pointer"
+                            >
+                                {work.imageUrl && ( // Conditionally render image if imageUrl exists
+                                    <img
+                                        src={work.imageUrl}
+                                        alt={work.name}
+                                        className="w-full h-48 object-cover rounded-lg mb-4"
+                                        onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x200/cccccc/333333?text=Project+Image'; }}
+                                    />
+                                )}
                                 <h3 className="text-xl font-semibold text-blue-700 mb-2">{work.name}</h3>
-                                <p className="text-gray-600">Click to view details (placeholder)</p>
-                                <div className="mt-4 text-blue-500">
+                                <p className="text-gray-600">Click for more details</p>
+                                <div className="mt-4 text-blue-500 flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     View Project
                                 </div>
-                            </a>
+                            </button>
                         ))}
                     </div>
                 ) : (
@@ -516,43 +663,96 @@ const SampleWorksSection = ({ experience, research }) => {
     );
 };
 
-// Functional component for the Contact section
-const ContactSection = ({ personal, references }) => (
-    <section id="contact" className="py-12 bg-white rounded-lg shadow-xl px-4">
-        <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center border-b-2 border-blue-500 pb-2">Contact & References</h2>
-
-            <div className="mb-10 p-6 bg-gray-50 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-blue-700 mb-4">Contact Information</h3>
-                <p className="text-lg text-gray-700 mb-2"><strong>Email:</strong> <a href={`mailto:${personal.email}`} className="text-blue-600 hover:underline">{personal.email}</a></p>
-                <p className="text-lg text-gray-700 mb-2"><strong>Mobile:</strong> <a href={`tel:${personal.mobile}`} className="text-blue-600 hover:underline">{personal.mobile}</a></p>
-                <p className="text-lg text-gray-700 mb-2"><strong>Address:</strong> {personal.address}</p>
-                <p className="text-lg text-gray-700"><strong>Nationality:</strong> {personal.nationality}</p>
+// New Functional component for displaying individual project details
+const ProjectDetailSection = ({ project, setActiveSection }) => {
+    if (!project) {
+        return (
+            <div className="text-center py-12 bg-white rounded-lg shadow-xl px-4">
+                <p className="text-gray-600 text-lg">No project selected.</p>
+                <button
+                    onClick={() => setActiveSection('sample-works')}
+                    className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+                >
+                    Back to Sample Works
+                </button>
             </div>
+        );
+    }
 
-            <div>
-                <h3 className="text-2xl font-bold text-blue-700 mb-5">References</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {references.map((ref, index) => (
-                        <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                            <p className="text-xl font-semibold text-gray-900 mb-1">{ref.name}</p>
-                            <p className="text-blue-700 mb-1">{ref.position}</p>
-                            <p className="text-gray-700 mb-1">{ref.organization}</p>
-                            <p className="text-gray-700 mb-1">Contact: {ref.contact}</p>
-                            <p className="text-gray-700 mb-1">Email: <a href={`mailto:${ref.email}`} className="text-blue-600 hover:underline">{ref.email}</a></p>
-                            <p className="text-gray-700">Relation: {ref.relation}</p>
+    // Function to handle image error fallback for additional images
+    const handleImageError = (e) => {
+        e.target.onerror = null; // Prevent infinite loop
+        e.target.src = 'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found'; // Fallback placeholder
+    };
+
+    return (
+        <section id="project-detail" className="py-12 bg-white rounded-lg shadow-xl px-4">
+            <div className="max-w-5xl mx-auto">
+                <button
+                    onClick={() => setActiveSection('sample-works')}
+                    className="mb-8 flex items-center bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition duration-300"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to All Sample Works
+                </button>
+
+                <h2 className="text-4xl font-extrabold text-gray-900 mb-6 text-center border-b-2 border-blue-500 pb-3">
+                    {project.name}
+                </h2>
+
+                {project.imageUrl && ( // Display thumbnail if available
+                    <img
+                        src={project.imageUrl}
+                        alt={project.name}
+                        className="w-full max-h-96 object-contain rounded-lg mb-8 shadow-md"
+                        onError={handleImageError}
+                    />
+                )}
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    {project.fullDescription}
+                </p>
+
+                {project.additionalImages && project.additionalImages.length > 0 && (
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-bold text-blue-700 mb-4">Additional Photos</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {project.additionalImages.map((imgSrc, index) => (
+                                <div key={index} className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
+                                    <img
+                                        src={imgSrc}
+                                        alt={`${project.name} - Image ${index + 1}`}
+                                        className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300"
+                                        onError={handleImageError}
+                                    />
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                )}
+
+                <div className="text-center mt-10">
+                    <button
+                        onClick={() => setActiveSection('sample-works')}
+                        className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+                    >
+                        Return to Projects
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
+
 
 // Main App Component
 const App = () => {
     // State to manage the active section for navigation
     const [activeSection, setActiveSection] = useState('home');
+    // State to hold the details of the currently selected project for the detail page
+    const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
 
     // Render the active section based on the state
     const renderSection = () => {
@@ -568,7 +768,19 @@ const App = () => {
             case 'trainings':
                 return <TrainingsSection trainings={profileData.trainings} />;
             case 'sample-works':
-                return <SampleWorksSection experience={profileData.experience} research={profileData.research}/>;
+                // Pass setSelectedProjectDetails to SampleWorksSection so it can update the state
+                return <SampleWorksSection
+                            experience={profileData.experience}
+                            research={profileData.research}
+                            setActiveSection={setActiveSection}
+                            setSelectedProjectDetails={setSelectedProjectDetails}
+                        />;
+            case 'project-detail':
+                // Render the ProjectDetailSection with the selected project's data
+                return <ProjectDetailSection
+                            project={selectedProjectDetails}
+                            setActiveSection={setActiveSection}
+                        />;
             case 'contact':
                 return <ContactSection personal={profileData.personal} references={profileData.references} />;
             default:

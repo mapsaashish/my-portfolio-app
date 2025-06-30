@@ -6,7 +6,7 @@ const profileData = {
         email: 'itsaabhaas@gmail.com',
         dob: '18-01-1997',
         nationality: 'Nepali',
-        profileImage: 'https://placehold.co/200x200/007bff/ffffff?text=Your+Photo' // Placeholder for profile image
+        profileImage: 'public\images\profile_photo.jpg' // Placeholder for profile image
     },
     academic: [
         {
@@ -40,7 +40,7 @@ const profileData = {
                 'Facilitated training sessions for over 7 working local units of SARA (First Phase), significantly contributing to the rollout and adoption of new technological tools for problem-solving.'
             ],
             sampleWorks: [
-                { name: 'Community GIS Tool (CGIST)', link: '#' }, // Placeholder link
+                { name: 'Community GIS Tool (CGIST) For Nepal Police', link: '#' }, // Placeholder link
                 { name: 'Security and Justice Programme Maps', link: '#' } // Placeholder link
             ]
         },
