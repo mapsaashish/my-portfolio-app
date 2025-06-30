@@ -11,7 +11,7 @@ const profileData = {
         email: 'itsaabhaas@gmail.com',
         dob: '18-01-1997',
         nationality: 'Nepali',
-        profileImage: '.\public\images\profile_photo.jpg' // Placeholder for profile image
+        profileImage: '.\.\public\images\profile_photo.jpg' // Placeholder for profile image
     },
     academic: [
         {
